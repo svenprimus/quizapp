@@ -17,9 +17,21 @@
             crossorigin="anonymous"
         ></script>
         <link rel="stylesheet" href="style.css" />
+        <script src="./scripts/db.js"></script>
+        <script src="./scripts/templates.js"></script>
         <script src="script.js"></script>
     </head>
-    <body>
-        <h1>Quizapp</h1>
+    <body onload="init()">
+        <nav class="navbar bg-body-tertiary">
+            <div class="container-fluid">
+                <span class="navbar-brand mb-0 h1">QuizApp</span>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="card quiz-card">
+                <img src="./assets/img/quiz-bg.jpg" class="card-img-top" alt="green questionmark" />
+                <div id="card_body" class="card-body"></div>
+            </div>
+        </div>
     </body>
 </html>
