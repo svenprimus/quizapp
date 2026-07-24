@@ -6,7 +6,7 @@ function getQuestion(questionIndex) {
 
 function getOption(questionIndex, optionIndex) {
     return /*html*/ `
-        <div class="card quiz-answer-card mb-2">
+        <div id="option_wrapper_${optionIndex}"class="card quiz-answer-card mb-2">
             <div id="option_${optionIndex}" class="card-body" onclick="answer(${optionIndex})"
             >
                 ${questions[questionIndex].options[optionIndex]}
@@ -18,8 +18,8 @@ function getOption(questionIndex, optionIndex) {
 function getCardFooter() {
     return /*html*/ `
         <div class="question-footer">
-            <span> <b>1</b> von <b id="total">${questions.length}</b> Questions </span>
-            <button type="button" class="btn btn-primary">Next Question</button>
+            <span> <b id="current">${current_question + 1}</b> von <b id="total">${questions.length}</b> Questions </span>
+            <button id="button-next" type="button" class="btn btn-primary" disabled onclick="nextQuestion()">Next Question</button>
         </div>
     `;
 }

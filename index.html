@@ -27,10 +27,25 @@
                 <span class="navbar-brand mb-0 h1">QuizApp</span>
             </div>
         </nav>
+
         <div class="container">
             <div class="card quiz-card">
-                <img src="./assets/img/quiz-bg.jpg" class="card-img-top" alt="green questionmark" />
-                <div id="card_body" class="card-body"></div>
+                <img id="header-img" src="./assets/img/quiz-bg.jpg" class="card-img-top" alt="green questionmark" />
+                <div class="progress">
+                    <div id="progress-bar" class="progress-bar" role="progressbar" style="width: 25%">25%</div>
+                </div>
+                <div id="question-body" class="card-body"></div>
+                <div id="endscreen" class="card-body d-none">
+                    <div class="text-center finished-headline">Quiz finished!</div>
+                    <div class="text-center">
+                        You scored <span id="score"></span> from <span id="total-answers"></span> points!
+                    </div>
+                    <div class="button-row">
+                        <button id="button-again" type="button" class="btn btn-primary" onclick="playAgain()">
+                            Play Again
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </body>
